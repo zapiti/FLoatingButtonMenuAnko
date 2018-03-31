@@ -1,145 +1,37 @@
 package com.dev.nathan.myapplication
 
-import android.view.Gravity
-import android.view.View
-import android.widget.LinearLayout
+
 import org.jetbrains.anko.*
-import org.jetbrains.anko.design.floatingActionButton
 
 
 class ActiviyUi : AnkoComponent<MainActivity> {
+
     override fun createView(ui: AnkoContext<MainActivity>) = with(ui) {
+        relativeLayout(){
 
-        relativeLayout {
-            id = fabFrame
-
-
-
-            linearLayout {
-                gravity = Gravity.CENTER_VERTICAL
-                id = layoutFabSave
-                orientation = LinearLayout.HORIZONTAL
-
-                textView {
-                    text = "bagulho luco"
-                    textSize = 18f
-                }.lparams(wrapContent, wrapContent) {
-                    weight = 1f
-                    gravity = Gravity.CENTER
-                    marginEnd = dip(5)
-
-                }
-                floatingActionButton {
-                    id = fabSave
-                    imageResource = R.drawable.ic_save_black_24dp
-//
-                }.lparams(width = wrapContent, height = wrapContent){
-                    weight = 1f
-                }
-            }.lparams(width = wrapContent, height = wrapContent) {
-                alignParentEnd()
-                above(layoutFabEdit)
-                marginEnd = dip(5)
-                bottomMargin = dip(15)
+            textView(){
+                textSize = 18f
+                text = "Mussum Ipsum, cacilds vidis litro abertis. Detraxit consequat et quo num tendi nada. Mé faiz elementum girarzis, nisi eros vermeio. Sapien in monti palavris qui num significa nadis i pareci latim. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis.\n" +
+                        "\n" +
+                        "Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis. Quem num gosta di mé, boa gentis num é. Paisis, filhis, espiritis santis. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi.\n" +
+                        "\n" +
+                        "Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum. Atirei o pau no gatis, per gatis num morreus. Quem manda na minha terra sou euzis! Viva Forevis aptent taciti sociosqu ad litora torquent.\n" +
+                        "\n" +
+                        "Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo! Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Aenean aliquam molestie leo, vitae iaculis nisl. Não sou faixa preta cumpadi, sou preto inteiris, inteiris.\n" +
+                        "\n" +
+                        "Diuretics paradis num copo é motivis de denguis. Per aumento de cachacis, eu reclamis. In elementis mé pra quem é amistosis quis leo. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per.\n" +
+                        "\n" +
+                        "Casamentiss faiz malandris se pirulitá. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose. Delegadis gente finis, bibendum egestas augue arcu ut est.\n" +
+                        "\n" +
+                        "Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis. Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!\n" +
+                        "\n" +
+                        "Quem num gosta di mim que vai caçá sua turmis! Suco de cevadiss deixa as pessoas mais interessantis. Copo furadis é disculpa de bebadis, arcu quam euismod magna. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis."
             }
+            skFloatActionMenu(){
 
-
-
-            linearLayout {
-                gravity = Gravity.CENTER_VERTICAL
-                id = layoutFabEdit
-                orientation = LinearLayout.HORIZONTAL
-                textView {
-                    text = "bagulho luco"
-                    textSize = 18f
-                }.lparams(wrapContent, wrapContent) {
-                    weight = 1f
-                    gravity = Gravity.CENTER
-                    marginEnd = dip(5)
-                }
-
-                floatingActionButton {
-                    id = fabEdit
-                    imageResource = R.drawable.ic_create_black_24dp
-//                    backgroundTint = android.R.color.holo_green_dark
-//                    fabSize = mini
-                }.lparams(width = wrapContent, height = wrapContent){
-                    weight = 1f
-
-                }
-            }.lparams(width = wrapContent, height = wrapContent) {
-
-                alignParentEnd()
-                above(layoutFabPhoto)
-                marginEnd = dip(5)
-                bottomMargin = dip(15)
-            }
-
-
-            linearLayout {
-                gravity = Gravity.CENTER_VERTICAL
-                id = layoutFabPhoto
-                orientation = LinearLayout.HORIZONTAL
-
-                textView {
-                    text = "bagulho luco"
-                    textSize = 18f
-                }.lparams(wrapContent, wrapContent) {
-                    weight = 1f
-                    gravity = Gravity.CENTER
-                    marginEnd = dip(5)
-
-                }
-                floatingActionButton {
-                    id = fabPhoto
-                    imageResource = R.drawable.ic_camera_alt_black_24dp
-//
-                }.lparams(width = wrapContent, height = wrapContent){
-                    weight = 1f
-                }
-            }.lparams(width = wrapContent, height = wrapContent) {
-                alignParentEnd()
-                above(layoutFabSettings)
-                marginEnd = dip(5)
-                bottomMargin = dip(15)
-
-            }
-
-
-            linearLayout {
-                gravity = Gravity.CENTER_VERTICAL
-                id = layoutFabSettings
-                orientation = LinearLayout.HORIZONTAL
-
-                floatingActionButton {
-                    id = fabSetting
-                    imageResource = R.drawable.ic_add_black
-//                    backgroundTint = R.color.primary_dark_material_dark
-//                    fabSize = normal
-                }.lparams(width = wrapContent, height = wrapContent) {
-
-                }
-            }.lparams(width = wrapContent, height = wrapContent) {
-                alignParentEnd()
-                alignParentBottom()
-                marginEnd = dip(15)
+            }.lparams(){
                 bottomMargin = dip(15)
             }
         }
-    }
-
-    companion object {
-        val cvtEdit = 1
-        val cvtPhoto = 2
-        val cvtSave = 3
-        val fabEdit = 4
-        val fabFrame = 5
-        val fabPhoto = 6
-        val fabSave = 7
-        val fabSetting = 8
-        val layoutFabEdit = 9
-        val layoutFabPhoto = 10
-        val layoutFabSave = 11
-        val layoutFabSettings = 12
     }
 }
